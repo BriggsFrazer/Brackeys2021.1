@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89f237b67f5c0b4b9ae9b0cef6b64e5, type: 3}
+  m_Name: GrandmaCookies
+  m_EditorClassIdentifier: 
+  itemName: Grandma's cookies
+  description: Fresh baked!
+  bigSprite: {fileID: 21300000, guid: 4f80b3e567c3c2a4987cec0139387d14, type: 3}
+  littleSprite: {fileID: 21300000, guid: 4f80b3e567c3c2a4987cec0139387d14, type: 3}
+  wearable: 0
