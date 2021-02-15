@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 261539273164162709}
   - component: {fileID: 1117523783353089931}
   - component: {fileID: -1896253952949841959}
+  - component: {fileID: 8072368957954195910}
   m_Layer: 0
   m_Name: ItemPanel
   m_TagString: Untagged
@@ -234,7 +235,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad161de3e14032f418bd0a59c73f4f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: 7a477910f2e48b54398251f3a9c60dd8, type: 2}
+  OnRewardSelected1: {fileID: 11400000, guid: 9d7258a94fd2656458e076870b89b203, type: 2}
+  PanelID: 0
+--- !u!61 &8072368957954195910
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6548811597248719022}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.04, y: 5.41}
+    newSize: {x: 7.04, y: 5.41}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5.41}
+  m_EdgeRadius: 0
 --- !u!1 &9065815206275858923
 GameObject:
   m_ObjectHideFlags: 0

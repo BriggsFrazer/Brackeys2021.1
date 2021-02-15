@@ -17,3 +17,4 @@ MonoBehaviour:
   bigSprite: {fileID: 21300000, guid: 4f80b3e567c3c2a4987cec0139387d14, type: 3}
   littleSprite: {fileID: 21300000, guid: 4f80b3e567c3c2a4987cec0139387d14, type: 3}
   wearable: 0
+  id: 0

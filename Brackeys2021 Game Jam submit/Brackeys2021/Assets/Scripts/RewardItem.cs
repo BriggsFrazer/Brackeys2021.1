@@ -8,10 +8,12 @@ using System;
 
 public class RewardItem : MonoBehaviour
 {
-    [SerializeField]
     private ItemData itemData;
 
-    private GameEvent OnRewardSelected;
+    [SerializeField]
+    private GameEvent OnRewardSelected1;
+    private GameEvent OnRewardSelected2;
+    private GameEvent OnRewardSelected3;
 
 
     private TMP_Text itemName;
@@ -22,24 +24,26 @@ public class RewardItem : MonoBehaviour
 
     private Image icon;
 
+    public int PanelID;
 
     private void initData()
     {
-        //itemName.text = itemData.itemName;
-        /*this.gameObject.transform.Find("Contents").gameObject.transform.Find("TitleText").GetComponent<TextMeshPro>().SetText(itemData.itemName);*/
-       //Debug.Log(this.gameObject.name);
+        itemData = GameObject.Find("Player").GetComponent<ItemTracker>().chosenItems[PanelID].GetComponent<Item>().itemData;
+        this.gameObject.transform.Find("Contents").gameObject.transform.Find("TitleText").GetComponent<TextMeshPro>().SetText(itemData.name);
+
+        Debug.Log("Pressed!");
     }
 
     private void Start()
     {
-        this.gameObject.transform.Find("Contents").gameObject.transform.Find("TitleText").GetComponent<TextMeshPro>().SetText(itemData.itemName);
-        initData();
+        PanelID = 0;
+
     }
     private void OnMouseDown()
     {
         initData();
-        Debug.Log("Pressed!");
-        OnRewardSelected.Raise();
+
+        OnRewardSelected1.Raise();
     }
 
     private void DrawText()

@@ -24,7 +24,8 @@ public class ItemData : ScriptableObject
     [SerializeField]
     public bool wearable;
 
-
+    [SerializeField]
+    public int id;
 
 }
 

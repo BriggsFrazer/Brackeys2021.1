@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public List<GameObject> PlayerItems;
+    public void AddItem(int itemToAdd) {
+        PlayerItems.Add(this.GetComponent<ItemTracker>().chosenItems[itemToAdd]);
     }
+
 }
