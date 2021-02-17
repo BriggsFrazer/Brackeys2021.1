@@ -21,6 +21,8 @@ public class ItemTracker : MonoBehaviour
     }
 
     public void ChooseNextThree() {
+        chosenItems.Clear();
+
 
         for (int i = 0; i < 3; i++)
         {
@@ -30,6 +32,7 @@ public class ItemTracker : MonoBehaviour
                var ItemData = item.GetComponent<Item>().itemData.id;
                if (ItemData == id) { 
                     chosenItems.Add(item);
+                    
                 }
             }
         }

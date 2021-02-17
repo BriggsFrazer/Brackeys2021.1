@@ -27,5 +27,8 @@ public class ItemData : ScriptableObject
     [SerializeField]
     public int id;
 
+    [SerializeField]
+    public int demographicID;
+
 }
 

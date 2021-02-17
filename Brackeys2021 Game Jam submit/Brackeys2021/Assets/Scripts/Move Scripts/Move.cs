@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class Move : MonoBehaviour
 {
     [SerializeField]
-    public ItemData itemData;
-
-
-
-
+    public MoveData moveData;
 }
