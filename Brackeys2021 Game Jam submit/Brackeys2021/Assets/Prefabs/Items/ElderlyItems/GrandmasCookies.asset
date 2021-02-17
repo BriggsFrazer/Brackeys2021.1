@@ -16,6 +16,6 @@ MonoBehaviour:
   description: Baked Fresh!
   bigSprite: {fileID: 0}
   littleSprite: {fileID: 0}
-  wearable: 0
+  wearable: 1
   id: 0
-  DemographicID: 4
+  demographicID: 0
