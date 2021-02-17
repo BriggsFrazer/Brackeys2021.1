@@ -12,6 +12,10 @@ GameObject:
   - component: {fileID: -8740988227916193142}
   - component: {fileID: -7787870446072954846}
   - component: {fileID: 4555210841056937948}
+  - component: {fileID: 1819017995}
+  - component: {fileID: 1819017996}
+  - component: {fileID: 1819017997}
+  - component: {fileID: 1819017998}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -95,6 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e9ba75a57e7449bfcf229acfe505f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerMaxHealth: 0
+  PlayerCurrentHealth: 0
+  DemographicMultipliers: 
+  DemographicNumbers: 
+  Money: 0
+  currentStage: 0
+  intendedDamage: 0
 --- !u!114 &4555210841056937948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: -7787870446072954846}
         m_MethodName: AddItem
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -122,3 +133,75 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1819017995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2764255961372367675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e590d07c28a40cc45b320923617bf8a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allItems: []
+  ItemHolder: {fileID: 0}
+  chosenItems: []
+--- !u!114 &1819017996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2764255961372367675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea911e3905e3414f8675b094eb4c6fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allEnemies: []
+  currentEnemy: {fileID: 0}
+  enemyHolder: {fileID: 0}
+--- !u!114 &1819017997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2764255961372367675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a82e576bc86ea46bcbef7e3e3d1002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 80279c30fdd28c3499dc0a82f77bea8d, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -7787870446072954846}
+        m_MethodName: DoMove
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1819017998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2764255961372367675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90bae7fae3bc4704ab1adc82fca7806f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allMoves: []
+  moveHolder: {fileID: 0}
+  currentMoves: []
