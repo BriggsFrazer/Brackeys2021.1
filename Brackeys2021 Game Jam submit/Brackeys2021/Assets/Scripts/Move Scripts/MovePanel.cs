@@ -31,10 +31,25 @@ public class MovePanel: MonoBehaviour
     {
         initData();
         Debug.Log("Pressed!");
+        this.GetComponent<SpriteRenderer>().color = Color.red;
         move1Selected.Raise();
 
     }
+    private void OnMouseUp()
+    {
+        this.GetComponent<SpriteRenderer>().color = Color.white;
+    }
 
+
+    private void OnMouseOver()
+    {
+        this.transform.localScale = new Vector3(1.1f, 1.1f);
+    }
+
+    private void OnMouseExit()
+    {
+        this.transform.localScale = new Vector3(1f, 1f);
+    }
     // Update is called once per frame
-    
+
 }
