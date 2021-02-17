@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a37d8cbd4730355448ca86dc64bfcbc5, type: 3}
+  m_Name: TwoRats
+  m_EditorClassIdentifier: 
+  enemyName: Two (2) Rats
+  Idle1Sprite: {fileID: 21300000, guid: 970bb27765228f54da9b47f0f620812b, type: 3}
+  Idle2Sprite: {fileID: 0}
+  HitSprite: {fileID: 0}
+  BaseDamage: 5
+  BaseHealth: 40
+  enemyID: 0
+  demographicID: 0

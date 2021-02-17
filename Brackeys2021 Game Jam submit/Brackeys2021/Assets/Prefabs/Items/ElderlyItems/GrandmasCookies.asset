@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f89f237b67f5c0b4b9ae9b0cef6b64e5, type: 3}
-  m_Name: GrandmaCookies
+  m_Name: GrandmasCookies
   m_EditorClassIdentifier: 
-  itemName: Grandma's cookies
-  description: Fresh baked!
-  bigSprite: {fileID: 21300000, guid: 4f80b3e567c3c2a4987cec0139387d14, type: 3}
-  littleSprite: {fileID: 21300000, guid: 4f80b3e567c3c2a4987cec0139387d14, type: 3}
+  itemName: Grandma's Cookies
+  description: Baked Fresh!
+  bigSprite: {fileID: 0}
+  littleSprite: {fileID: 0}
   wearable: 0
   id: 0
+  DemographicID: 4

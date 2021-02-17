@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8973850121099904500
+--- !u!1 &3784405460555319880
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,52 +8,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3318450997228810356}
-  - component: {fileID: -695144887836077511}
-  - component: {fileID: -8032174087918293081}
+  - component: {fileID: 3784405460555319881}
+  - component: {fileID: 3492387188499342554}
+  - component: {fileID: -6592163393944929997}
   m_Layer: 0
-  m_Name: Grandma'sCookies
+  m_Name: Fan Power
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3318450997228810356
+--- !u!4 &3784405460555319881
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8973850121099904500}
+  m_GameObject: {fileID: 3784405460555319880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.020353153, y: 0.19400898, z: -0.29525834}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-695144887836077511
+--- !u!114 &3492387188499342554
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8973850121099904500}
+  m_GameObject: {fileID: 3784405460555319880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fffe5f30da575eb42b8bd9df8ca195cf, type: 3}
+  m_Script: {fileID: 11500000, guid: a2407831945574045998590a31f1f554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: df824e096e63f9b45a66ed6c2f76b353, type: 2}
---- !u!114 &-8032174087918293081
+  moveData: {fileID: 11400000, guid: 8257fc8511fb0c548a15a596f8ac0d33, type: 2}
+--- !u!114 &-6592163393944929997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8973850121099904500}
+  m_GameObject: {fileID: 3784405460555319880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c37cc99e75765844a790d3dacce4ebc, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e5aafe9f48f8d24981d48f07a0dcc3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
