@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerMaxHealth: 100
-  PlayerCurrentHealth: 0
+  PlayerCurrentHealth: 100
   DemographicMultipliers: 
   DemographicNumbers: 
   Money: 0

@@ -23,15 +23,14 @@ public class MovePanel: MonoBehaviour
 
     private void Start()
     {
-        panelID = 0;
+
         
     }
 
     private void OnMouseDown()
     {
         initData();
-        Debug.Log("Pressed!");
-        this.GetComponent<SpriteRenderer>().color = Color.red;
+        this.GetComponent<SpriteRenderer>().color = new Color(1,0.8235f, 0.9654f);
         move1Selected.Raise();
 
     }
