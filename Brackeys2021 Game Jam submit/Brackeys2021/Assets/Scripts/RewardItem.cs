@@ -16,7 +16,7 @@ public class RewardItem : MonoBehaviour
     private GameEvent OnRewardSelected3;
 
 
-    private TMP_Text itemName;
+    private Text itemName;
 
 
     private Text description;
@@ -29,7 +29,10 @@ public class RewardItem : MonoBehaviour
     private void initData()
     {
         itemData = GameObject.Find("Player").GetComponent<ItemTracker>().chosenItems[PanelID].GetComponent<Item>().itemData;
-        this.gameObject.transform.Find("Contents").gameObject.transform.Find("TitleText").GetComponent<TextMeshPro>().SetText(itemData.name);
+
+        Debug.Log(itemData.name);
+
+        this.gameObject.transform.Find("Card").gameObject.transform.Find("TitleText").GetComponent<UnityEngine.UI.Text>().text = (itemData.name);
 
         Debug.Log("Pressed!");
     }
@@ -39,7 +42,7 @@ public class RewardItem : MonoBehaviour
         PanelID = 0;
 
     }
-    private void OnMouseDown()
+    public void OnClick()
     {
         initData();
 
