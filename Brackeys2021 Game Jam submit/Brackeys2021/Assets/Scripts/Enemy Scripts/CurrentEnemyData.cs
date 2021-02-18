@@ -18,7 +18,8 @@ public class CurrentEnemyData : MonoBehaviour
     public bool hit;
 
     public float timer;
-    
+
+    public float swapTime;
 
     void Update()
     {
@@ -36,7 +37,7 @@ public class CurrentEnemyData : MonoBehaviour
         }
 
         timer += Time.deltaTime;
-        if(timer > 1f)
+        if(timer > swapTime)
         {
             timer = 0;
             spriteToShow = !spriteToShow;

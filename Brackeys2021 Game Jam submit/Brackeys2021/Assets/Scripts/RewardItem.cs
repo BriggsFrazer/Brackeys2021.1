@@ -45,7 +45,7 @@ public class RewardItem : MonoBehaviour
         Debug.Log("Pressed!");
     }
 
-    private void OnStart()
+    private void Start()
     {
         PanelID = 0;
         initData();
@@ -55,6 +55,7 @@ public class RewardItem : MonoBehaviour
         initData();
 
         OnRewardSelected1.Raise();
+        this.gameObject.SetActive(false);
     }
 
     private void DrawText()

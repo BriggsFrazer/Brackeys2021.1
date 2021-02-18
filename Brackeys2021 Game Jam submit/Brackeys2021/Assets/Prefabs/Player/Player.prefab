@@ -108,6 +108,14 @@ MonoBehaviour:
   Money: 0
   currentStage: 0
   intendedDamage: 0
+  timer: 0
+  swapTime: 0.4
+  spriteToShow: 0
+  hit: 0
+  idle1: {fileID: -8694602221398857845, guid: 38a63eef78b9397418882b2687d96648, type: 3}
+  idle2: {fileID: -781931229171910354, guid: 38a63eef78b9397418882b2687d96648, type: 3}
+  hitSprite: {fileID: 325674440452686046, guid: 38a63eef78b9397418882b2687d96648,
+    type: 3}
 --- !u!114 &4555210841056937948
 MonoBehaviour:
   m_ObjectHideFlags: 0
