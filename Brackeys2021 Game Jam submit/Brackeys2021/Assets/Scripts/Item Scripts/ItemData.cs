@@ -18,7 +18,13 @@ public class ItemData : ScriptableObject
 
 
     [SerializeField]
-    public Sprite littleSprite;
+    public Sprite idle1;
+
+    [SerializeField]
+    public Sprite idle2;
+
+    [SerializeField]
+    public Sprite hitSprite;
 
 
     [SerializeField]

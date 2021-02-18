@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Jerome
   m_EditorClassIdentifier: 
   enemyName: Jerome
-  Idle1Sprite: {fileID: 21300000, guid: f22a0a9c954411d46851d1a6c742ee77, type: 3}
-  Idle2Sprite: {fileID: 0}
-  HitSprite: {fileID: 0}
+  Idle1Sprite: {fileID: -6152789002125063391, guid: 64f796f8785c0f24cb12b23314781d16,
+    type: 3}
+  Idle2Sprite: {fileID: 3349655255765385597, guid: 64f796f8785c0f24cb12b23314781d16,
+    type: 3}
+  HitSprite: {fileID: 6811938290248893965, guid: 64f796f8785c0f24cb12b23314781d16,
+    type: 3}
   BaseDamage: 5
   BaseHealth: 40
   enemyID: 0
