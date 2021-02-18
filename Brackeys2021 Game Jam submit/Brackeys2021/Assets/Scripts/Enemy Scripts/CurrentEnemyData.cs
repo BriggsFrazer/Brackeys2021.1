@@ -14,11 +14,33 @@ public class CurrentEnemyData : MonoBehaviour
 
     public string enemyName;
 
+    public bool spriteToShow;
+    public bool hit;
 
+    public float timer;
+    
 
-    void Start()
+    void Update()
     {
-        
+        if (hit)
+        {
+            this.GetComponent<SpriteRenderer>().sprite = enemyData.HitSprite;
+        }
+        else if (spriteToShow)
+        {
+            this.GetComponent<SpriteRenderer>().sprite = enemyData.Idle1Sprite;
+        }
+        else
+        {
+            this.GetComponent<SpriteRenderer>().sprite = enemyData.Idle2Sprite;
+        }
+
+        timer += Time.deltaTime;
+        if(timer > 1f)
+        {
+            timer = 0;
+            spriteToShow = !spriteToShow;
+        }
     }
 
     public void InitialiseNewEnemy()
