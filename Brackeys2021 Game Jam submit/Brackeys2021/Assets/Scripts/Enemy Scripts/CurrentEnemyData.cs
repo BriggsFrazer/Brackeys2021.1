@@ -15,6 +15,7 @@ public class CurrentEnemyData : MonoBehaviour
     public string enemyName;
 
 
+
     void Start()
     {
         
