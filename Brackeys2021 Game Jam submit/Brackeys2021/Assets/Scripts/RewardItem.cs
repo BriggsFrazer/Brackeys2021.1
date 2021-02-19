@@ -12,7 +12,9 @@ public class RewardItem : MonoBehaviour
 
     [SerializeField]
     private GameEvent OnRewardSelected1;
+    [SerializeField]
     private GameEvent OnRewardSelected2;
+    [SerializeField]
     private GameEvent OnRewardSelected3;
 
 
@@ -26,13 +28,13 @@ public class RewardItem : MonoBehaviour
 
     public int PanelID;
 
-    private Color[] colors = { new Color(0.1725f, 1, 0.98f), new Color(0.227f, 1, 0.6f), new Color(1, 0.741f, 0), new Color(1, 0.584f, 0.871f),  Color.green }; 
+    private Color[] colors = { Color.white, new Color(0.1725f, 1, 0.98f), new Color(0.227f, 1, 0.6f), new Color(1, 0.741f, 0), new Color(1, 0.584f, 0.871f),  Color.green }; 
 
-    private void initData()
+    public void initData()
     {
         itemData = GameObject.Find("Player").GetComponent<ItemTracker>().chosenItems[PanelID].GetComponent<Item>().itemData;
 
-        
+   
 
         this.gameObject.transform.Find("Card").gameObject.transform.Find("TitleText").GetComponent<UnityEngine.UI.Text>().text = (itemData.itemName);
         
@@ -46,20 +48,27 @@ public class RewardItem : MonoBehaviour
     }
 
     private void Start()
-    {
-        PanelID = 0;
-        initData();
+    {        
     }
+
     public void OnClick()
     {
-        initData();
 
-        OnRewardSelected1.Raise();
-        this.gameObject.SetActive(false);
+        // initData();
+        if (PanelID == 0)
+        {
+            OnRewardSelected1.Raise();
+        }
+        else if (PanelID == 1)
+        {
+            OnRewardSelected2.Raise();
+        }
+        else
+        {
+            OnRewardSelected3.Raise();
+        }
+       this.transform.parent.gameObject.SetActive(false);
     }
 
-    private void DrawText()
-    {
 
-    }
 }
