@@ -29,8 +29,9 @@ public class GameController : MonoBehaviour
      
      */
 
-
-
+    public GameObject heartParticles;
+    public GameObject thumbParticles;
+    public GameObject sadParticles;
 
 
 
@@ -97,7 +98,43 @@ public class GameController : MonoBehaviour
     void StartNewTurn()
     {
         GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().InitialiseNewEnemy();
+
+        GameObject.Find("Player").GetComponent<PlayerData>().DoEndOfTurn();
+
+
+        GameObject.Find("Player").GetComponent<PlayerData>().PrevPlayerCurrentHealth = GameObject.Find("Player").GetComponent<PlayerData>().PlayerCurrentHealth;
+        GameObject.Find("Player").GetComponent<PlayerData>().PrevPlayerMaxHealth = GameObject.Find("Player").GetComponent<PlayerData>().PlayerMaxHealth;
+
+        for (int i = 0; i < GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers.Count - 1; i++)
+        {
+            GameObject.Find("Player").GetComponent<PlayerData>().PrevDemographicNumbers[i] = GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[i];
+        }
+
+        GameObject.Find("Player").GetComponent<PlayerData>().PrevMoney = GameObject.Find("Player").GetComponent<PlayerData>().Money;
+
     }
+
+    public void NewTurnAnimations()
+    {
+        for (int i = 0; i < GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers.Count ; i++)
+        {
+
+
+
+            if (GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[i] > GameObject.Find("Player").GetComponent<PlayerData>().PrevDemographicNumbers[i])
+            {
+
+               Instantiate(thumbParticles, new Vector3(-0.45f + (0.3f * i), -0.394f , -1), sadParticles.transform.rotation);
+               Instantiate(heartParticles, new Vector3(-0.45f + (0.3f * i), -0.394f, -1), sadParticles.transform.rotation);
+            }
+            if (GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[i] < GameObject.Find("Player").GetComponent<PlayerData>().PrevDemographicNumbers[i])
+            {
+               Instantiate(sadParticles, new Vector3(-0.45f + (0.3f * i), -0.394f, -1), sadParticles.transform.rotation);
+            }
+        }
+    }
+
+
 
     // Update is called once per frame
     void Update()

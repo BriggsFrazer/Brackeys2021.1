@@ -17,6 +17,7 @@ public class RewardItem : MonoBehaviour
     [SerializeField]
     private GameEvent OnRewardSelected3;
 
+    public GameEvent ItemChosen;
 
     private Text itemName;
 
@@ -70,6 +71,7 @@ public class RewardItem : MonoBehaviour
             OnRewardSelected3.Raise();
         }
        this.transform.parent.gameObject.SetActive(false);
+        ItemChosen.Raise();
     }
 
 

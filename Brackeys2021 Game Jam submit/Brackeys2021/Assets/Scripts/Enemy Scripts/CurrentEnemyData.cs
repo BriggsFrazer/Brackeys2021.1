@@ -61,7 +61,12 @@ public class CurrentEnemyData : MonoBehaviour
 
     public void AttackHero()
     {
-        GameObject.Find("Player").GetComponent<PlayerData>().TakeDamge(enemyDamage);
+
+        Random.InitState(System.DateTime.Now.Millisecond);
+        var calcDamage = enemyDamage + Random.Range(-(enemyDamage/10),enemyDamage/10);
+
+
+        GameObject.Find("Player").GetComponent<PlayerData>().TakeDamge(calcDamage);
     }
 
 

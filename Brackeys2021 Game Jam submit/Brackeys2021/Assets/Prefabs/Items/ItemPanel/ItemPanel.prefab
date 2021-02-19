@@ -327,6 +327,7 @@ MonoBehaviour:
   OnRewardSelected1: {fileID: 11400000, guid: 9d7258a94fd2656458e076870b89b203, type: 2}
   OnRewardSelected2: {fileID: 11400000, guid: f0f10a98ad38b67448b9bcaaf1fffe13, type: 2}
   OnRewardSelected3: {fileID: 11400000, guid: c11e722f97e50404799b2edac4b96d83, type: 2}
+  ItemChosen: {fileID: 11400000, guid: 6be7476ffbb12394cae9b65e1c6a247e, type: 2}
   PanelID: 0
 --- !u!61 &8072368957954195910
 BoxCollider2D:
@@ -420,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a82e576bc86ea46bcbef7e3e3d1002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: a575835314a0c7f49973f437538f1c9b, type: 2}
+  gameEvent: {fileID: 11400000, guid: 6be7476ffbb12394cae9b65e1c6a247e, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:
