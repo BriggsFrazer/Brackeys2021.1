@@ -9,11 +9,17 @@ public class PlayerData : MonoBehaviour
 
     public GameObject startingMove;
 
+    public int PrevPlayerMaxHealth;
     public int PlayerMaxHealth;
+
+    public int PrevPlayerCurrentHealth;
     public int PlayerCurrentHealth;
 
     public List<int> DemographicMultipliers;
+    public List<int> PrevDemographicNumbers;
     public List<int> DemographicNumbers;
+
+    public int PrevMoney;
     public int Money;
 
     public GameObject wearableSprite;
@@ -44,11 +50,6 @@ public class PlayerData : MonoBehaviour
 
 
         PlayerItems.Add(GameObject.Find("Player").GetComponent<ItemTracker>().chosenItems[itemToAdd]);
-
-        Debug.Log("Item 1 " + GameObject.Find("Player").GetComponent<ItemTracker>().chosenItems[0].name);
-        Debug.Log("Item 2 " + GameObject.Find("Player").GetComponent<ItemTracker>().chosenItems[1].name);
-        Debug.Log("Item 3 " + GameObject.Find("Player").GetComponent<ItemTracker>().chosenItems[2].name);
-
 
 
 
@@ -100,6 +101,21 @@ public class PlayerData : MonoBehaviour
         StartCoroutine(HitEnemy());
     }
 
+    public void DoEndOfTurn()
+    {
+
+        for (int i = 0; i < PlayerItems.Count; i++)
+        {
+
+            ItemEffect effect = (ItemEffect)PlayerItems[i].GetComponent(typeof(ItemEffect));
+            effect.PassiveTurnEffect();
+        }
+    }
+
+
+
+
+
     IEnumerator HitEnemy()
     {
         GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().hit = true;
@@ -134,6 +150,7 @@ public class PlayerData : MonoBehaviour
     public void TakeDamge(int intended)
     {
         intendedIncomingDamage = intended;
+
         Debug.Log(PlayerItems.Count);
         for (int i = 0; i < PlayerItems.Count; i++)
         {
@@ -151,7 +168,7 @@ public class PlayerData : MonoBehaviour
             StartCoroutine(IsHit());
         }
 
-        GameObject.Find("Player").GetComponent<PlayerData>().PlayerCurrentHealth -= intendedDamage;
+        GameObject.Find("Player").GetComponent<PlayerData>().PlayerCurrentHealth -= intendedIncomingDamage;
     }
 
     IEnumerator IsHit()
@@ -164,8 +181,16 @@ public class PlayerData : MonoBehaviour
     public void Start()
     {
         DemographicNumbers = new List<int> { 5, 5, 5, 5 };
+        PrevDemographicNumbers = new List<int> { 5,5,5,5};
+
         DemographicMultipliers = new List<int> { 1, 1, 1, 1 };
+     
         Money = 0;
+        PrevMoney = Money;
+
+        PrevPlayerCurrentHealth = PlayerCurrentHealth;
+        PrevPlayerMaxHealth = PlayerMaxHealth;
+
         playerTurn = true;
         playerTurnText = true;
         currentStage = 0;
