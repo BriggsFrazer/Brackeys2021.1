@@ -15,11 +15,15 @@ public class TVShowScript : MonoBehaviour, ItemEffect
 
     }
 
-    public void PassiveCombatEffect()
+    public void PassiveOnAttackEffect()
     {
 
     }
 
+    public void PassiveOnDefendEffect()
+    {
+
+    }
     public void PassiveTurnEffect()
     {
 

@@ -7,7 +7,10 @@ public interface ItemEffect {
 
     void RemoveEffect();
 
-    void PassiveCombatEffect();
+    void PassiveOnAttackEffect();
+
+    void PassiveOnDefendEffect();
+
 
     void PassiveTurnEffect();
 

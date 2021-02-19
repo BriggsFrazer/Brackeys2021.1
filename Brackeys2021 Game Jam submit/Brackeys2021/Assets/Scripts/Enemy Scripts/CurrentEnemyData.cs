@@ -59,6 +59,10 @@ public class CurrentEnemyData : MonoBehaviour
 
     }
 
+    public void AttackHero()
+    {
+        GameObject.Find("Player").GetComponent<PlayerData>().TakeDamge(enemyDamage);
+    }
 
 
 }

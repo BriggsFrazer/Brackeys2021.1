@@ -15,7 +15,12 @@ public class GrandmaCookieScript : MonoBehaviour, ItemEffect
         GameObject.Find("Player").GetComponent<PlayerData>().PlayerMaxHealth -= 50;
     }
 
-    public void PassiveCombatEffect()
+    public void PassiveOnAttackEffect()
+    {
+
+    }
+
+    public void PassiveOnDefendEffect()
     {
 
     }

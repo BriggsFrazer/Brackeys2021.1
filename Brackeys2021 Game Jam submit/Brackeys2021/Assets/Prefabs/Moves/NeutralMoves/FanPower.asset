@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6346f24d0297c0542b4444831181348d, type: 3}
   m_Name: FanPower
   m_EditorClassIdentifier: 
-  moveName: Fan Power
+  moveName: Attack!
   description: Deals damage equal to total number of fans!
-  cost: 0
+  cost: 150
   id: 0
   demographicId: 0

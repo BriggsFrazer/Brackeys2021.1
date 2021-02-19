@@ -7,6 +7,8 @@ public class PlayerData : MonoBehaviour
     public static List<GameObject> PlayerItems = new List<GameObject>();
     public static List<GameObject> PlayerMoves = new List<GameObject>();
 
+    public GameObject startingMove;
+
     public int PlayerMaxHealth;
     public int PlayerCurrentHealth;
 
@@ -21,6 +23,7 @@ public class PlayerData : MonoBehaviour
     public int currentStage;
 
     public int intendedDamage;
+    public int intendedIncomingDamage;
 
     public float timer;
 
@@ -28,7 +31,8 @@ public class PlayerData : MonoBehaviour
 
     public bool spriteToShow;
     public bool hit;
-
+    public bool playerTurn;
+    public bool playerTurnText;
 
     public Sprite idle1;
     public Sprite idle2;
@@ -37,11 +41,6 @@ public class PlayerData : MonoBehaviour
     public GameEvent cardDataEvent;
     public void AddItem(int itemToAdd)
     {
-        Debug.Log("Gettign item " + itemToAdd);
-        if (this.GetComponent<ItemTracker>() != null)
-        {
-            Debug.Log("Has item tracker");
-        }
 
 
         PlayerItems.Add(GameObject.Find("Player").GetComponent<ItemTracker>().chosenItems[itemToAdd]);
@@ -51,8 +50,7 @@ public class PlayerData : MonoBehaviour
         Debug.Log("Item 3 " + GameObject.Find("Player").GetComponent<ItemTracker>().chosenItems[2].name);
 
 
-        Debug.Log(GameObject.Find("Player").GetComponent<ItemTracker>().chosenItems[itemToAdd].name);
-        Debug.Log(PlayerItems[PlayerItems.Count - 1].name);
+
 
         ItemEffect effect = (ItemEffect)GameObject.Find("Player").GetComponent<ItemTracker>().chosenItems[itemToAdd].GetComponent(typeof(ItemEffect));
         effect.AddEffect();
@@ -94,13 +92,32 @@ public class PlayerData : MonoBehaviour
     public void DoMove(int moveId)
     {
 
-        MoveEffect effect = (MoveEffect)this.GetComponent<MoveTracker>().currentMoves[moveId].GetComponent(typeof(MoveEffect));
+        MoveEffect effect = (MoveEffect)PlayerData.PlayerMoves[moveId].GetComponent(typeof(MoveEffect));
         effect.UseEffect();
 
         DealDamage();
- 
+        playerTurn = false;
+        StartCoroutine(HitEnemy());
     }
 
+    IEnumerator HitEnemy()
+    {
+        GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().hit = true;
+        yield return new WaitForSeconds(1);
+        if (GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().enemyCurrentHealth <= 0)
+        {
+            GameObject.Find("GameController").GetComponent<GameController>().DisplayRewards();
+            StartCoroutine(GameObject.Find("GameController").GetComponent<GameController>().SwapPlayerTurn());
+            GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().hit = false;
+        }
+        else
+        {
+            GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().hit = false;
+            playerTurnText = false;
+
+            GameObject.Find("GameController").GetComponent<GameController>().EnemyTurn();
+        }
+    }
 
     public void DealDamage()
     {
@@ -108,10 +125,40 @@ public class PlayerData : MonoBehaviour
         for (int i = 0; i < PlayerItems.Count; i++) {
             
             ItemEffect effect = (ItemEffect)PlayerItems[i].GetComponent(typeof(ItemEffect));
-            effect.PassiveCombatEffect();
+            effect.PassiveOnAttackEffect();
         }
 
         GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().enemyCurrentHealth -= intendedDamage;
+    }
+
+    public void TakeDamge(int intended)
+    {
+        intendedIncomingDamage = intended;
+        Debug.Log(PlayerItems.Count);
+        for (int i = 0; i < PlayerItems.Count; i++)
+        {
+
+            ItemEffect effect = (ItemEffect)PlayerItems[i].GetComponent(typeof(ItemEffect));
+            effect.PassiveOnDefendEffect();
+        }
+
+        if(intendedIncomingDamage < 0)
+        {
+            intendedIncomingDamage = 0;
+        }
+        else
+        {
+            StartCoroutine(IsHit());
+        }
+
+        GameObject.Find("Player").GetComponent<PlayerData>().PlayerCurrentHealth -= intendedDamage;
+    }
+
+    IEnumerator IsHit()
+    {
+        hit = true;
+        yield return new WaitForSeconds(1);
+        hit = false;
     }
 
     public void Start()
@@ -119,8 +166,16 @@ public class PlayerData : MonoBehaviour
         DemographicNumbers = new List<int> { 5, 5, 5, 5 };
         DemographicMultipliers = new List<int> { 1, 1, 1, 1 };
         Money = 0;
+        playerTurn = true;
+        playerTurnText = true;
+        currentStage = 0;
 
-        GameObject.Find("Canvas").transform.Find("RewardSelection").gameObject.SetActive(false);
+        PlayerMoves.Add(startingMove);
+        PlayerMoves.Add(startingMove);
+        PlayerMoves.Add(startingMove);
+
+
+
     }
 
     public void Update()
@@ -167,23 +222,7 @@ public class PlayerData : MonoBehaviour
             spriteToShow = !spriteToShow;
         }
 
-        if (Input.GetKeyDown("a"))
-        {
-            GameObject.Find("Canvas").transform.Find("RewardSelection").gameObject.SetActive(true);
-        }
 
-        if (Input.GetKeyDown("d"))
-        {
-            this.GetComponent<ItemTracker>().PopulateAllItem();
-        }
-        if (Input.GetKeyDown("f"))
-        {
-            this.GetComponent<ItemTracker>().ChooseNextThree();
-        }
-        if (Input.GetKeyDown("g"))
-        {
-            cardDataEvent.Raise();
-        }
     }
 }
 

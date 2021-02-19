@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/FightWithScripts.unity
+    guid: 78117dabcc68cd248b887d15b36532a5
+  - enabled: 1
+    path: Assets/Scenes/ScriptScene.unity
+    guid: d031ea1ca445481458d00aa187dffadf
   m_configObjects: {}

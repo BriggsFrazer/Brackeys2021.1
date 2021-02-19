@@ -14,9 +14,6 @@ public class MovePanel: MonoBehaviour
 
     private void initData()
     {
-        //moveData = GameObject.Find("Player").GetComponent<MoveTracker>().currentMoves[panelID];
-
-        //this.gameObject.transform.Find("Contents").gameObject.transform.Find("TitleText").GetComponent<TextMeshPro>().SetText(itemData.name);
 
         
     }
@@ -29,10 +26,11 @@ public class MovePanel: MonoBehaviour
 
     private void OnMouseDown()
     {
-        initData();
-        this.GetComponent<SpriteRenderer>().color = new Color(1,0.8235f, 0.9654f);
-        move1Selected.Raise();
-
+        if (GameObject.Find("Player").GetComponent<PlayerData>().playerTurn)
+        {
+            this.GetComponent<SpriteRenderer>().color = new Color(1, 0.8235f, 0.9654f);
+            move1Selected.Raise();
+        }
     }
     private void OnMouseUp()
     {

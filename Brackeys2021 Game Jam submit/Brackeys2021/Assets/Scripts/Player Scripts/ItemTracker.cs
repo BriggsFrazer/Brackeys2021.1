@@ -51,7 +51,6 @@ public class ItemTracker : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             int id = Random.Range(0, itemCount);
-            Debug.Log(id + " chosen id");
             bool found = false;
             foreach(var item in allItems)
             {
