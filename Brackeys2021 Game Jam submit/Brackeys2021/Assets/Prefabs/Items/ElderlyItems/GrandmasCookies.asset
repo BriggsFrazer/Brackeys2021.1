@@ -15,7 +15,10 @@ MonoBehaviour:
   itemName: Grandma's  Cookies
   description: 'Baked Fresh! Give the hero +50 HP '
   bigSprite: {fileID: 21300000, guid: 3cb22986a176d81469bf30c91d0a836a, type: 3}
-  littleSprite: {fileID: 0}
+  idle1: {fileID: -6192672283230793096, guid: ae446b00f0415fb46aea52f41210604f, type: 3}
+  idle2: {fileID: 5354103704695411996, guid: ae446b00f0415fb46aea52f41210604f, type: 3}
+  hitSprite: {fileID: -2236863221682675735, guid: ae446b00f0415fb46aea52f41210604f,
+    type: 3}
   wearable: 1
   id: 0
-  demographicID: 0
+  demographicID: 4
