@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6346f24d0297c0542b4444831181348d, type: 3}
-  m_Name: AbsorbYouthData
+  m_Name: DadJokeData
   m_EditorClassIdentifier: 
-  moveName: Absorb Youth
-  description: Deal 2X Elderly fans damage. Gain 2X Elderly fans health. Lose 1 elderly,
-    gain 1 adult.
+  moveName: Dad Joke
+  description: Deal 7X Adult damage. Lose half Teen followers.
   cost: 300
-  id: 8
-  demographicId: 4
+  id: 11
+  demographicId: 3

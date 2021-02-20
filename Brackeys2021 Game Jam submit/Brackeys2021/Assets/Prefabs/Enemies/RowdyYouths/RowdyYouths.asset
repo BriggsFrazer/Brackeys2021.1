@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a37d8cbd4730355448ca86dc64bfcbc5, type: 3}
+  m_Name: RowdyYouths
+  m_EditorClassIdentifier: 
+  enemyName: Rowdy Youths
+  Idle1Sprite: {fileID: 21300000, guid: 3426c883ac1aad343bcb4ca5532ee7ad, type: 3}
+  Idle2Sprite: {fileID: 21300000, guid: 91ebbb67bdd283e409473de3ed85cc54, type: 3}
+  HitSprite: {fileID: 21300000, guid: d6ea03b5976897d46ba51d5635d72c76, type: 3}
+  BaseDamage: 6
+  BaseHealth: 90
+  enemyID: 3
+  demographicID: 2

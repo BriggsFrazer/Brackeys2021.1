@@ -344,7 +344,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: POGGERS
+  m_Text: BEGIN!
 --- !u!222 &324271560
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -550,8 +550,9 @@ GameObject:
   - component: {fileID: 1091915499}
   - component: {fileID: 1091915498}
   - component: {fileID: 1091915497}
+  - component: {fileID: 1091915500}
   m_Layer: 5
-  m_Name: Button
+  m_Name: TransitionButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -619,7 +620,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1091915498}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1091915500}
+        m_MethodName: GoToGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1091915498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,6 +669,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091915495}
   m_CullTransparentMesh: 0
+--- !u!114 &1091915500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091915495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4f373d92583a54fa8324b3833bc192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1166790827
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,7 +832,8 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverTime.minScalar
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2373298176999747482, guid: ef4d5058989be224db42958b3db848ca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ef4d5058989be224db42958b3db848ca, type: 3}
 --- !u!1 &1206132235
 GameObject:
@@ -1155,7 +1180,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8058252291169226874, guid: ebcf05ad855046447abcde5c835594cd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ebcf05ad855046447abcde5c835594cd, type: 3}
 --- !u!1 &1477686317
 GameObject:
@@ -1348,7 +1374,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8058252291169226874, guid: ebcf05ad855046447abcde5c835594cd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ebcf05ad855046447abcde5c835594cd, type: 3}
 --- !u!1 &1666058029
 GameObject:
@@ -1412,8 +1439,9 @@ GameObject:
   - component: {fileID: 1818871376}
   - component: {fileID: 1818871375}
   - component: {fileID: 1818871374}
+  - component: {fileID: 1818871377}
   m_Layer: 5
-  m_Name: Button
+  m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1482,12 +1510,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1818871377}
+        m_MethodName: ShowPopUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1530,6 +1558,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818871372}
   m_CullTransparentMesh: 0
+--- !u!114 &1818871377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818871372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ce87eddeab81c428262d280355c2ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1922154776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1647,7 +1687,8 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverTime.minScalar
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2373298176999747482, guid: ef4d5058989be224db42958b3db848ca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ef4d5058989be224db42958b3db848ca, type: 3}
 --- !u!1 &1983840853
 GameObject:

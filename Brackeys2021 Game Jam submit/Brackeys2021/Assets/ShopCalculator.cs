@@ -29,6 +29,10 @@ public class ShopCalculator : MonoBehaviour
 
     public void SwapItems(int i)
     {
+
+        //Play Sound 
+
+
         if(i == 1)
         {
             ResetShop();
