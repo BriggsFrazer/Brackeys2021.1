@@ -2,17 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OverdraftScript : MonoBehaviour
+public class OverdraftScript : MonoBehaviour, ItemEffect
 {
-    // Start is called before the first frame update
-    void Start()
+    public void AddEffect()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RemoveEffect()
     {
-        
+
+    }
+
+    public void PassiveOnAttackEffect()
+    {
+        if (GameObject.Find("Player").GetComponent<PlayerData>().Money >= 20)
+        {
+            GameObject.Find("Player").GetComponent<PlayerData>().Money -= 20;
+            GameObject.Find("Player").GetComponent<PlayerData>().intendedDamage += 20;
+        }
+    }
+
+    public void PassiveOnDefendEffect()
+    {
+
+    }
+
+    public void PassiveTurnEffect()
+    {
+
     }
 }
