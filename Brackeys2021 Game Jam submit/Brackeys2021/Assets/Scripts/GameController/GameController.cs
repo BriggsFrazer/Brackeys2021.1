@@ -83,6 +83,7 @@ public class GameController : MonoBehaviour
     {
         GameObject.Find("Player").GetComponent<PlayerData>().currentStage += 1;
         GameObject.Find("Player").GetComponent<ItemTracker>().ChooseNextThree();
+        GameObject.Find("Player").GetComponent<PlayerData>().playerTurn = false;
         GameObject.Find("Canvas").transform.Find("RewardSelection").gameObject.SetActive(true);
         if (GameObject.Find("Player").GetComponent<PlayerData>().currentStage % 3 == 0)
         {

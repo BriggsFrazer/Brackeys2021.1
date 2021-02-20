@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TVShowScript : MonoBehaviour, ItemEffect
+public class AlterEgoScript : MonoBehaviour, ItemEffect
 {
     public void AddEffect()
     {
+        GameObject.Find("Player").GetComponent<PlayerData>().Money += 30;
 
-        GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[0] += 3;
+
     }
 
     public void RemoveEffect()
@@ -24,8 +25,10 @@ public class TVShowScript : MonoBehaviour, ItemEffect
     {
 
     }
+
     public void PassiveTurnEffect()
     {
-        GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[0] += 3;
+        AddEffect();
+
     }
 }

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a37d8cbd4730355448ca86dc64bfcbc5, type: 3}
-  m_Name: RowdyYouths
+  m_Name: Doohickey
   m_EditorClassIdentifier: 
-  enemyName: Rowdy Youths
-  Idle1Sprite: {fileID: 21300000, guid: 3426c883ac1aad343bcb4ca5532ee7ad, type: 3}
-  Idle2Sprite: {fileID: 21300000, guid: 91ebbb67bdd283e409473de3ed85cc54, type: 3}
-  HitSprite: {fileID: 21300000, guid: d6ea03b5976897d46ba51d5635d72c76, type: 3}
-  BaseDamage: 6
-  BaseHealth: 90
-  enemyID: 3
-  demographicID: 3
+  enemyName: Doohickey
+  Idle1Sprite: {fileID: 21300000, guid: 8d0bcf7e2933c15438fcec53d00e7dae, type: 3}
+  Idle2Sprite: {fileID: 21300000, guid: f576b9c9894112f43a89a79dde0bf8b2, type: 3}
+  HitSprite: {fileID: 21300000, guid: 01f72c571fc9a9544be5da9a58bd25af, type: 3}
+  BaseDamage: 5
+  BaseHealth: 75
+  enemyID: 4
+  demographicID: 4
