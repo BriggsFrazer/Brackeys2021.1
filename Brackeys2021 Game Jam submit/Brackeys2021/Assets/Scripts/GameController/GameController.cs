@@ -155,6 +155,6 @@ public class GameController : MonoBehaviour
 
     public void GoToMenu()
     {
-        SceneManager.LoadScene("Title Screen");
+        SceneManager.LoadScene("TitleScreen");
     }
 }
