@@ -6,8 +6,8 @@ public class TVShowScript : MonoBehaviour, ItemEffect
 {
     public void AddEffect()
     {
-        Debug.Log("TV Show used");
-        GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[0] += 10;
+
+        GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[0] += 3;
     }
 
     public void RemoveEffect()
@@ -26,6 +26,6 @@ public class TVShowScript : MonoBehaviour, ItemEffect
     }
     public void PassiveTurnEffect()
     {
-
+        GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[0] += 3;
     }
 }
