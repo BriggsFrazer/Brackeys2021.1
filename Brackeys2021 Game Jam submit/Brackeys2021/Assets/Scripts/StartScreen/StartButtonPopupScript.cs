@@ -13,8 +13,7 @@ public class StartButtonPopupScript : MonoBehaviour
     // Update is called once per frame
     public void ShowPopUp()
     {
-        GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("button");
-        GetComponent<AudioSource>().Play();
+        gameObject.GetComponent<AudioSource>().Play();
         GameObject.Find("Canvas").transform.Find("PopUp").gameObject.SetActive(true);
     }
 }

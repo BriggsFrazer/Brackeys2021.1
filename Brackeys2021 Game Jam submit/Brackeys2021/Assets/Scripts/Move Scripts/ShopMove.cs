@@ -30,7 +30,7 @@ public class ShopMove : MonoBehaviour
 
     public void OnShopClick()
     {
-
+        GameObject.Find("ButtonSound").GetComponent<AudioSource>().Play();
 
         if (GameObject.Find("Player").GetComponent<MoveTracker>().currentMoves.Count > moveID) { 
             GameObject.Find("Cost").GetComponent<ShopCalculator>().shopItem = GameObject.Find("Player").GetComponent<MoveTracker>().currentMoves[moveID];
