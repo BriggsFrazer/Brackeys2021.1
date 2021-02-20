@@ -106,7 +106,7 @@ public class GameController : MonoBehaviour
         GameObject.Find("Player").GetComponent<PlayerData>().PrevPlayerCurrentHealth = GameObject.Find("Player").GetComponent<PlayerData>().PlayerCurrentHealth;
         GameObject.Find("Player").GetComponent<PlayerData>().PrevPlayerMaxHealth = GameObject.Find("Player").GetComponent<PlayerData>().PlayerMaxHealth;
 
-        for (int i = 0; i < GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers.Count - 1; i++)
+        for (int i = 0; i <= GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers.Count - 1; i++)
         {
             GameObject.Find("Player").GetComponent<PlayerData>().PrevDemographicNumbers[i] = GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[i];
         }
