@@ -9,6 +9,6 @@ public class ShowMoney : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.GetComponent<UnityEngine.UI.Text>().text = "Money: " +  GameObject.Find("Player").GetComponent<PlayerData>().Money.ToString();
+        this.GetComponent<UnityEngine.UI.Text>().text = "MONEY: " +  GameObject.Find("Player").GetComponent<PlayerData>().Money.ToString();
     }
 }

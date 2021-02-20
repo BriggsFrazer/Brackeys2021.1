@@ -14,6 +14,6 @@ public class ShowFans : MonoBehaviour
         {
             fancount += GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[i];
         }
-        this.GetComponent<UnityEngine.UI.Text>().text = "Total Fans: " + fancount;
+        this.GetComponent<UnityEngine.UI.Text>().text = "TOTAL FANS: " + fancount;
     }
 }
