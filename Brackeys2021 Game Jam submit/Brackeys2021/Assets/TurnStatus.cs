@@ -15,11 +15,11 @@ public class TurnStatus : MonoBehaviour
     {
         if(GameObject.Find("Player").GetComponent<PlayerData>().playerTurnText)
         {
-            this.GetComponent<UnityEngine.UI.Text>().text = "Your Turn";
+            this.GetComponent<UnityEngine.UI.Text>().text = "YOUR TURN!";
         }
         else
         {
-            this.GetComponent<UnityEngine.UI.Text>().text = "Enemy Turn!";
+            this.GetComponent<UnityEngine.UI.Text>().text = "ENEMY TURN!";
         }
     }
 }
