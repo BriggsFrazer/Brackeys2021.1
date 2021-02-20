@@ -127,9 +127,8 @@ public class PlayerData : MonoBehaviour
         yield return new WaitForSeconds(1);
         if (GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().enemyCurrentHealth <= 0)
         {
-            GameObject.Find("GameController").GetComponent<GameController>().DisplayRewards();
             GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().GiveRewards();
-            StartCoroutine(GameObject.Find("GameController").GetComponent<GameController>().SwapPlayerTurn());
+            GameObject.Find("GameController").GetComponent<GameController>().DisplayRewards();
             GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().hit = false;
         }
         else
@@ -210,6 +209,8 @@ public class PlayerData : MonoBehaviour
         playerTurn = true;
         playerTurnText = true;
         currentStage = 0;
+
+        PlayerItems.Clear();
 
         PlayerMoves.Add(startingMove);
         PlayerMoves.Add(startingMove);

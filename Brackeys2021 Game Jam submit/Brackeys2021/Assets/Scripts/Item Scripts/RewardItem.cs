@@ -70,7 +70,8 @@ public class RewardItem : MonoBehaviour
         {
             OnRewardSelected3.Raise();
         }
-       this.transform.parent.gameObject.SetActive(false);
+        GameObject.Find("Player").GetComponent<PlayerData>().playerTurn = true;
+        this.transform.parent.gameObject.SetActive(false);
         ItemChosen.Raise();
     }
 
