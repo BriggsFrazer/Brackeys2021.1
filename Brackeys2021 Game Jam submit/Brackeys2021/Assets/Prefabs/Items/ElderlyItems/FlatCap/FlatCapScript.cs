@@ -2,17 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlapCapScript : MonoBehaviour
+public class FlatCapScript : MonoBehaviour, ItemEffect
 {
-    // Start is called before the first frame update
-    void Start()
+    public void AddEffect()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RemoveEffect()
     {
-        
+
+    }
+
+    public void PassiveOnAttackEffect()
+    {
+
+    }
+
+    public void PassiveOnDefendEffect()
+    {
+        GameObject.Find("Player").GetComponent<PlayerData>().intendedIncomingDamage -= 10;
+    }
+
+    public void PassiveTurnEffect()
+    {
+
     }
 }

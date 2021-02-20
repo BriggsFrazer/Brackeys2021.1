@@ -2,17 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PensionScript : MonoBehaviour
+public class PensionScript : MonoBehaviour, ItemEffect
 {
-    // Start is called before the first frame update
-    void Start()
+    public void AddEffect()
+    {
+
+    }
+
+    public void RemoveEffect()
+    {
+
+    }
+
+    public void PassiveOnAttackEffect()
+    {
+
+    }
+
+    public void PassiveOnDefendEffect()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PassiveTurnEffect()
     {
-        
+        GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[3] += (int)GameObject.Find("Player").GetComponent<PlayerData>().Money/100;
     }
 }
