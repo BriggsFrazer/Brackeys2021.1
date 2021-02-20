@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: UnderdogStrikeData
   m_EditorClassIdentifier: 
   moveName: Underdog Strike
-  description: Deal 4X Teen fans damage. +Damage based on missing health %
+  description: Deal 3X Teen fans damage. +Damage based on missing health %
   cost: 200
   id: 6
   demographicId: 2

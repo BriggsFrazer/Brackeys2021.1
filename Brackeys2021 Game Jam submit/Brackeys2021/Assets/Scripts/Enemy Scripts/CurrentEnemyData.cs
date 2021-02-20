@@ -53,10 +53,10 @@ public class CurrentEnemyData : MonoBehaviour
         int currentStage = GameObject.Find("Player").GetComponent<PlayerData>().currentStage;
 
         enemyData = this.transform.GetChild(0).GetComponent<Enemy>().enemyData;
-        enemyMaxHealth = enemyData.BaseHealth + (enemyData.BaseHealth/2 * currentStage);
+        enemyMaxHealth = enemyData.BaseHealth + (int)(enemyData.BaseHealth/1.5f * currentStage);
         enemyName = enemyData.enemyName;
         enemyCurrentHealth = enemyMaxHealth;
-        enemyDamage = enemyData.BaseDamage + (enemyData.BaseDamage * currentStage);
+        enemyDamage = enemyData.BaseDamage + (int)(enemyData.BaseDamage/1.5f * currentStage);
         
 
         this.GetComponent<SpriteRenderer>().sprite = enemyData.Idle1Sprite;
