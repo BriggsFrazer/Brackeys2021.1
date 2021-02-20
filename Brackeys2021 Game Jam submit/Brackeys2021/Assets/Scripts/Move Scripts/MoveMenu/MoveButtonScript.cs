@@ -10,10 +10,10 @@ public class MoveButtonScript : MonoBehaviour
     public void Update()
     {
 
-        if ((PlayerData.PlayerMoves.Count - 1) >= moveID)
+        if ((GameObject.Find("Player").GetComponent<PlayerData>().PlayerMoves.Count - 1) >= moveID)
         {
-           this.transform.Find("MoveName").GetComponent<UnityEngine.UI.Text>().text = PlayerData.PlayerMoves[moveID].GetComponent<Move>().moveData.moveName;
-            this.transform.Find("MoveName").transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = PlayerData.PlayerMoves[moveID].GetComponent<Move>().moveData.description;
+           this.transform.Find("MoveName").GetComponent<UnityEngine.UI.Text>().text = GameObject.Find("Player").GetComponent<PlayerData>().PlayerMoves[moveID].GetComponent<Move>().moveData.moveName;
+            this.transform.Find("MoveName").transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = GameObject.Find("Player").GetComponent<PlayerData>().PlayerMoves[moveID].GetComponent<Move>().moveData.description;
         }
         else
         {
@@ -25,7 +25,7 @@ public class MoveButtonScript : MonoBehaviour
     public void OnClick()
     {
 
-        GameObject.Find("Cost").GetComponent<ShopCalculator>().playerItem = PlayerData.PlayerMoves[moveID];
+        GameObject.Find("Cost").GetComponent<ShopCalculator>().playerItem = GameObject.Find("Player").GetComponent<PlayerData>().PlayerMoves[moveID];
         GameObject.Find("Cost").GetComponent<ShopCalculator>().playerItemNum = moveID;
     }
 }

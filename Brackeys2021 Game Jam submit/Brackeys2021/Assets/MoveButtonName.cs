@@ -8,9 +8,9 @@ public class MoveButtonName : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((PlayerData.PlayerMoves.Count - 1) >= moveID)
+        if ((GameObject.Find("Player").GetComponent<PlayerData>().PlayerMoves.Count - 1) >= moveID)
         {
-            this.GetComponent<UnityEngine.UI.Text>().text = PlayerData.PlayerMoves[moveID].GetComponent<Move>().moveData.moveName;
+            this.GetComponent<UnityEngine.UI.Text>().text = GameObject.Find("Player").GetComponent<PlayerData>().PlayerMoves[moveID].GetComponent<Move>().moveData.moveName;
         }
         else
         {

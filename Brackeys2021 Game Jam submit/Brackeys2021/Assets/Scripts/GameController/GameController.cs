@@ -123,9 +123,15 @@ public class GameController : MonoBehaviour
 
             if (GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[i] > GameObject.Find("Player").GetComponent<PlayerData>().PrevDemographicNumbers[i])
             {
-
-               Instantiate(thumbParticles, new Vector3(-0.45f + (0.3f * i), -0.394f , -1), sadParticles.transform.rotation);
-               Instantiate(heartParticles, new Vector3(-0.45f + (0.3f * i), -0.394f, -1), sadParticles.transform.rotation);
+                if (GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[i] - GameObject.Find("Player").GetComponent<PlayerData>().PrevDemographicNumbers[i] >= 10)
+                {
+                    Instantiate(heartParticles, new Vector3(-0.45f + (0.3f * i), -0.394f, -1), sadParticles.transform.rotation);
+                    Instantiate(thumbParticles, new Vector3(-0.45f + (0.3f * i), -0.394f, -1), sadParticles.transform.rotation);
+                }
+                else
+                {
+                    Instantiate(thumbParticles, new Vector3(-0.45f + (0.3f * i), -0.394f, -1), sadParticles.transform.rotation);
+                }
             }
             if (GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[i] < GameObject.Find("Player").GetComponent<PlayerData>().PrevDemographicNumbers[i])
             {

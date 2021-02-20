@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerData : MonoBehaviour
 {
     public static List<GameObject> PlayerItems = new List<GameObject>();
-    public static List<GameObject> PlayerMoves = new List<GameObject>();
+    public List<GameObject> PlayerMoves;
 
     public GameObject startingMove;
 
@@ -45,6 +45,11 @@ public class PlayerData : MonoBehaviour
     public Sprite hitSprite;
 
     public GameEvent cardDataEvent;
+
+
+    public Vector3 startPos;
+    public Vector3 endPos;
+    public Vector3 currentPos;
     public void AddItem(int itemToAdd)
     {
 
@@ -92,8 +97,8 @@ public class PlayerData : MonoBehaviour
 
     public void DoMove(int moveId)
     {
-
-        MoveEffect effect = (MoveEffect)PlayerData.PlayerMoves[moveId].GetComponent(typeof(MoveEffect));
+        Debug.Log("Called to do move" + moveId);
+        MoveEffect effect = (MoveEffect)GameObject.Find("Player").GetComponent<PlayerData>().PlayerMoves[moveId].GetComponent(typeof(MoveEffect));
         effect.UseEffect();
 
         DealDamage();
@@ -123,6 +128,7 @@ public class PlayerData : MonoBehaviour
         if (GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().enemyCurrentHealth <= 0)
         {
             GameObject.Find("GameController").GetComponent<GameController>().DisplayRewards();
+            GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().GiveRewards();
             StartCoroutine(GameObject.Find("GameController").GetComponent<GameController>().SwapPlayerTurn());
             GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().hit = false;
         }
@@ -143,7 +149,7 @@ public class PlayerData : MonoBehaviour
             ItemEffect effect = (ItemEffect)PlayerItems[i].GetComponent(typeof(ItemEffect));
             effect.PassiveOnAttackEffect();
         }
-
+        StartCoroutine(GoForward());
         GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().enemyCurrentHealth -= intendedDamage;
     }
 
@@ -248,6 +254,38 @@ public class PlayerData : MonoBehaviour
         }
 
 
+    }
+
+    IEnumerator GoForward()
+    {
+        float elapsedTime = 0;
+        float waitTime = 0.2f;
+        currentPos = transform.position;
+        while (elapsedTime < waitTime)
+        {
+            transform.position = Vector3.Lerp(currentPos, endPos, (elapsedTime / waitTime));
+            elapsedTime += Time.deltaTime;
+
+            yield return null;
+        }
+        transform.position = endPos;
+        StartCoroutine(GoBack());
+        yield return null;
+    }
+    IEnumerator GoBack()
+    {
+        float elapsedTime = 0;
+        float waitTime = 0.2f;
+        currentPos = transform.position;
+        while (elapsedTime < waitTime)
+        {
+            transform.position = Vector3.Lerp(currentPos, startPos, (elapsedTime / waitTime));
+            elapsedTime += Time.deltaTime;
+
+            yield return null;
+        }
+        transform.position = startPos;
+        yield return null;
     }
 }
 

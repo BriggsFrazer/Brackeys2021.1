@@ -29,13 +29,19 @@ public class ShopCalculator : MonoBehaviour
 
     public void SwapItems(int i)
     {
+        if(i == 1)
+        {
+            ResetShop();
+            this.transform.parent.gameObject.SetActive(false);
+        }
+
         if (playerItem && shopItem)
         {
             if (GameObject.Find("Player").GetComponent<PlayerData>().Money >= cost)
             {
                 GameObject.Find("Player").GetComponent<PlayerData>().Money -= cost;
-                PlayerData.PlayerMoves[playerItemNum] = shopItem;
-                GameObject.Find("Player").GetComponent<ItemTracker>().chosenItems[shopItemNum] = playerItem;
+                GameObject.Find("Player").GetComponent<PlayerData>().PlayerMoves[playerItemNum] = shopItem;
+                GameObject.Find("Player").GetComponent<MoveTracker>().currentMoves[shopItemNum] = playerItem;
             }
             ResetShop();
         }

@@ -124,3 +124,5 @@ MonoBehaviour:
   panelID: 1
   moveData: {fileID: 11400000, guid: 8257fc8511fb0c548a15a596f8ac0d33, type: 2}
   move1Selected: {fileID: 11400000, guid: 80279c30fdd28c3499dc0a82f77bea8d, type: 2}
+  move2Selected: {fileID: 11400000, guid: 79224c0d660ab22438a1701eab8cf0bc, type: 2}
+  move3Selected: {fileID: 11400000, guid: baa19f9c3e1bfc343bfaf0a572c7192f, type: 2}

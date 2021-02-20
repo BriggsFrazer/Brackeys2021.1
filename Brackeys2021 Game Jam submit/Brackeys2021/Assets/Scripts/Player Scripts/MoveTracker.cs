@@ -14,15 +14,6 @@ public class MoveTracker : MonoBehaviour
     void Start()
     {
 
-        for (int i = 0; i < moveHolder.transform.childCount; i++)
-        {
-            allMoves.Add(moveHolder.transform.GetChild(i).gameObject);
-        }
-
-        
-        
-        Debug.Log(allMoves.Count);
-
     }
 
 
@@ -30,6 +21,7 @@ public class MoveTracker : MonoBehaviour
     {
         for (int i = 0; i < GameObject.Find("MoveHolder").transform.childCount; i++)
         {
+            Debug.Log("Added move: " + i);
             allMoves.Add(GameObject.Find("MoveHolder").transform.GetChild(i).gameObject);
         }
 
