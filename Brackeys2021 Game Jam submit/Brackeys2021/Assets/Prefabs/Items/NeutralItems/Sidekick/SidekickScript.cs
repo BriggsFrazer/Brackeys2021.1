@@ -2,17 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SidekickScript : MonoBehaviour
+public class SidekickScript : MonoBehaviour, ItemEffect
 {
-    // Start is called before the first frame update
-    void Start()
+    public void AddEffect()
     {
-        
+
+       GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[3] += 1;
+
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RemoveEffect()
     {
-        
+
+    }
+
+    public void PassiveOnAttackEffect()
+    {
+
+        GameObject.Find("Player").GetComponent<PlayerData>().intendedDamage += GameObject.Find("Player").GetComponent<PlayerData>().intendedDamage/10;
+
+    }
+
+    public void PassiveOnDefendEffect()
+    {
+
+    }
+
+    public void PassiveTurnEffect()
+    {
+
     }
 }

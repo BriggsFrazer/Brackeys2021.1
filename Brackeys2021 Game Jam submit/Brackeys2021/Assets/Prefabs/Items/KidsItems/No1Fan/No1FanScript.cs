@@ -2,17 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class No1FanScript : MonoBehaviour
+public class No1FanScript : MonoBehaviour, ItemEffect
 {
-    // Start is called before the first frame update
-    void Start()
+    public void AddEffect()
     {
-        
+        GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[0] += 1;
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RemoveEffect()
     {
-        
+
+    }
+
+    public void PassiveOnAttackEffect()
+    {
+
+        GameObject.Find("Player").GetComponent<PlayerData>().intendedDamage += 5;
+
+    }
+
+    public void PassiveOnDefendEffect()
+    {
+        GameObject.Find("Player").GetComponent<PlayerData>().intendedIncomingDamage -= 5;
+    }
+
+    public void PassiveTurnEffect()
+    {
+
     }
 }

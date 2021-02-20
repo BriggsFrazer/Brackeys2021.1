@@ -2,17 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TradingCardGameScript : MonoBehaviour
+public class TradingCardGameScript : MonoBehaviour, ItemEffect
 {
-    // Start is called before the first frame update
-    void Start()
+    public void AddEffect()
     {
-        
+        PassiveTurnEffect();
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RemoveEffect()
     {
-        
+
+    }
+
+    public void PassiveOnAttackEffect()
+    {
+
+
+
+    }
+
+    public void PassiveOnDefendEffect()
+    {
+
+    }
+
+    public void PassiveTurnEffect()
+    {
+        Random.InitState(System.DateTime.Now.Millisecond);
+        if (Random.Range(1, 5) == 4)
+        {
+
+            GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[1] += 10;
+        }
     }
 }

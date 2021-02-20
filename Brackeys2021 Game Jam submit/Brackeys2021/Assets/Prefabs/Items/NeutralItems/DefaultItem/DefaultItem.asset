@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DefaultItem
   m_EditorClassIdentifier: 
   itemName: Bandage
-  description: There is no more to give! Gain 50 hp!
+  description: Quick grab a bandage! Heal 20%
   bigSprite: {fileID: 21300000, guid: 450bda2ac60e2534189273f9893e6e0c, type: 3}
   idle1: {fileID: 0}
   idle2: {fileID: 0}
