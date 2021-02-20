@@ -103,3 +103,6 @@ MonoBehaviour:
   hit: 0
   timer: 0
   swapTime: 0.4
+  startPos: {x: 0.704, y: 0.199, z: -0.5}
+  endPos: {x: 0.529, y: 0.199, z: -0.5}
+  currentPos: {x: 0, y: 0, z: 0}

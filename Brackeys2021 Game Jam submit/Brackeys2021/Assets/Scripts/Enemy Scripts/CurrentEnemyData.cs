@@ -21,6 +21,10 @@ public class CurrentEnemyData : MonoBehaviour
 
     public float swapTime;
 
+    public Vector3 startPos;
+    public Vector3 endPos;
+    public Vector3 currentPos;
+
     void Update()
     {
         if (hit)
@@ -53,6 +57,7 @@ public class CurrentEnemyData : MonoBehaviour
         enemyName = enemyData.enemyName;
         enemyCurrentHealth = enemyMaxHealth;
         enemyDamage = enemyData.BaseDamage + (enemyData.BaseDamage * currentStage);
+        
 
         this.GetComponent<SpriteRenderer>().sprite = enemyData.Idle1Sprite;
         GameObject.Find("Canvas").transform.Find("EnemyName").GetComponent<EnemyName>().UpdateText(enemyName);
@@ -65,9 +70,58 @@ public class CurrentEnemyData : MonoBehaviour
         Random.InitState(System.DateTime.Now.Millisecond);
         var calcDamage = enemyDamage + Random.Range(-(enemyDamage/10),enemyDamage/10);
 
-
+        StartCoroutine(GoForward());
         GameObject.Find("Player").GetComponent<PlayerData>().TakeDamge(calcDamage);
     }
 
+    IEnumerator GoForward()
+    {
+        float elapsedTime = 0;
+        float waitTime = 0.2f;
+        currentPos = transform.position;
+        while (elapsedTime < waitTime)
+        {
+            transform.position = Vector3.Lerp(currentPos, endPos, (elapsedTime / waitTime));
+            elapsedTime += Time.deltaTime;
 
+            yield return null;
+        }
+        transform.position = endPos;
+        StartCoroutine(GoBack());
+        yield return null;
+    }
+    IEnumerator GoBack()
+    {
+        float elapsedTime = 0;
+        float waitTime = 0.2f;
+        currentPos = transform.position;
+        while (elapsedTime < waitTime)
+        {
+            transform.position = Vector3.Lerp(currentPos, startPos, (elapsedTime / waitTime));
+            elapsedTime += Time.deltaTime;
+
+            yield return null;
+        }
+        transform.position = startPos;
+        yield return null;
+    }
+
+    public void GiveRewards()
+    {
+        GameObject.Find("Player").GetComponent<PlayerData>().Money += 50 + (GameObject.Find("Player").GetComponent<PlayerData>().currentStage * 50);
+        List<int> demographicReward = new List<int>();
+
+        int rewardAmount = 2;
+        for (int i=0; i < GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers.Count; i++)
+        {
+            if (enemyData.demographicID == i+1)
+            {
+                GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[i] += 5;
+            }
+            else {
+                GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[i] += rewardAmount;
+            }
+        }
+
+    }
 }

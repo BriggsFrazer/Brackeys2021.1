@@ -25,11 +25,13 @@ public class EnemyTracker : MonoBehaviour
 
 
 
-    // Update is called once per frame
+
     public void ChooseNewEnemy()
     {
 
        currentEnemy.transform.GetChild(0).parent = enemyHolder.transform;
+
+       //Gets the enemy that was just readded and orders it by its ID in the child hierarchy
        enemyHolder.transform.GetChild(enemyHolder.transform.childCount-1).SetSiblingIndex(enemyHolder.transform.GetChild(enemyHolder.transform.childCount-1).GetComponent<Enemy>().enemyData.enemyID);
 
 
