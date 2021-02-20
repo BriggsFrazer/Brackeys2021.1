@@ -24,7 +24,7 @@ public class MoveButtonScript : MonoBehaviour
 
     public void OnClick()
     {
-
+        GameObject.Find("ButtonSound").GetComponent<AudioSource>().Play();
         GameObject.Find("Cost").GetComponent<ShopCalculator>().playerItem = GameObject.Find("Player").GetComponent<PlayerData>().PlayerMoves[moveID];
         GameObject.Find("Cost").GetComponent<ShopCalculator>().playerItemNum = moveID;
     }

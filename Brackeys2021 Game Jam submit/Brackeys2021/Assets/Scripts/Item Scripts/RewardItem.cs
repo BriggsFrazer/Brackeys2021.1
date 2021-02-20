@@ -56,7 +56,7 @@ public class RewardItem : MonoBehaviour
 
     public void OnClick()
     {
-
+        GameObject.Find("ButtonSound").GetComponent<AudioSource>().Play();
         // initData();
         if (PanelID == 0)
         {

@@ -31,9 +31,9 @@ public class ShopCalculator : MonoBehaviour
     {
 
         //Play Sound 
+        GameObject.Find("ButtonSound").GetComponent<AudioSource>().Play();
 
-
-        if(i == 1)
+        if (i == 1)
         {
             ResetShop();
             this.transform.parent.gameObject.SetActive(false);

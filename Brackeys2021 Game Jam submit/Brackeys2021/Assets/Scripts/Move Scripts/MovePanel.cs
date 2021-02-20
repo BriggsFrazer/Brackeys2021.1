@@ -33,8 +33,10 @@ public class MovePanel: MonoBehaviour
 
     private void OnMouseDown()
     {
+        
         if (GameObject.Find("Player").GetComponent<PlayerData>().playerTurn)
         {
+            GameObject.Find("ButtonSound").GetComponent<AudioSource>().Play();
             this.GetComponent<SpriteRenderer>().color = new Color(1, 0.8235f, 0.9654f);
             if (panelID == 0)
             {
