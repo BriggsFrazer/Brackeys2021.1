@@ -7,7 +7,7 @@ public class UnderdogStrikeScript : MonoBehaviour, MoveEffect
     public void UseEffect()
     {
         int damage = 0;
-        damage += GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[1] * 3;
+        damage += GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[1] * 4;
         float Mod = 1 + (GameObject.Find("Player").GetComponent<PlayerData>().PlayerCurrentHealth / GameObject.Find("Player").GetComponent<PlayerData>().PlayerMaxHealth);
 
         var damageFloat = damage * Mod;
