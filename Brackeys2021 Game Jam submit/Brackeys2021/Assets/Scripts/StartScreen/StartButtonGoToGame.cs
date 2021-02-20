@@ -14,6 +14,8 @@ public class StartButtonGoToGame : MonoBehaviour
     // Update is called once per frame
     public void GoToGame()
     {
+        GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("button");
+        GetComponent<AudioSource>().Play();
         SceneManager.LoadScene("FightWithScripts");
     }
 }
