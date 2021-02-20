@@ -97,6 +97,7 @@ public class GameController : MonoBehaviour
 
     void StartNewTurn()
     {
+        GameObject.Find("Player").GetComponent<EnemyTracker>().ChooseNewEnemy();
         GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().InitialiseNewEnemy();
 
         GameObject.Find("Player").GetComponent<PlayerData>().DoEndOfTurn();
