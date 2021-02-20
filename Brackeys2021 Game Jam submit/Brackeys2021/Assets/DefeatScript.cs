@@ -13,6 +13,6 @@ public class DefeatScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.GetComponent<UnityEngine.UI.Text>().text = "YOU HAVE BEEN DEFEATED! \n YOU HAVE REACHED ROUND: " + GameObject.Find("Player").GetComponent<PlayerData>().currentStage ;
+        gameObject.GetComponent<UnityEngine.UI.Text>().text = "YOU HAVE BEEN DEFEATED! \n YOU HAVE REACHED ROUND: " + GameObject.Find("Player").GetComponent<PlayerData>().currentStage + "\n BACK TO MENU";
     }
 }
