@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a37d8cbd4730355448ca86dc64bfcbc5, type: 3}
+  m_Name: WallBreakerData
+  m_EditorClassIdentifier: 
+  enemyName: Wall Breaker
+  Idle1Sprite: {fileID: 21300000, guid: 93011127de0f26242a592d1bfd2d5d3c, type: 3}
+  Idle2Sprite: {fileID: 21300000, guid: 0327995538e026347bfb13a499466702, type: 3}
+  HitSprite: {fileID: 21300000, guid: 42b1bed1a37ffbb45b08ef794c38f731, type: 3}
+  BaseDamage: 7
+  BaseHealth: 50
+  enemyID: 2
+  demographicID: 2
