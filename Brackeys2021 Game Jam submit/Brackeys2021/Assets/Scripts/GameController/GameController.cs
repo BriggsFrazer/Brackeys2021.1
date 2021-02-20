@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -48,6 +49,9 @@ public class GameController : MonoBehaviour
 
         GameObject.Find("Canvas").transform.Find("RewardSelection").gameObject.SetActive(false);
         GameObject.Find("Canvas").transform.Find("MoveMenu").gameObject.SetActive(false);
+        GameObject.Find("Canvas").transform.Find("EndScreenWin").gameObject.SetActive(false);
+        GameObject.Find("Canvas").transform.Find("EndScreenLose").gameObject.SetActive(false);
+
         GameObject.Find("Player").GetComponent<ItemTracker>().PopulateAllItem();
         GameObject.Find("Player").GetComponent<MoveTracker>().PopulateMoves();
         GameObject.Find("Player").GetComponent<MoveTracker>().ChooseNextThree();
@@ -97,6 +101,12 @@ public class GameController : MonoBehaviour
 
     void StartNewTurn()
     {
+
+        if (GameObject.Find("Player").GetComponent<PlayerData>().currentStage >= 20)
+        {
+            GameObject.Find("Canvas").transform.Find("EndScreenWin").gameObject.SetActive(true);
+        }
+
         GameObject.Find("Player").GetComponent<EnemyTracker>().ChooseNewEnemy();
         GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().InitialiseNewEnemy();
 
@@ -143,9 +153,8 @@ public class GameController : MonoBehaviour
 
 
 
-    // Update is called once per frame
-    void Update()
+    public void GoToMenu()
     {
-
+        SceneManager.LoadScene("Title Screen");
     }
 }

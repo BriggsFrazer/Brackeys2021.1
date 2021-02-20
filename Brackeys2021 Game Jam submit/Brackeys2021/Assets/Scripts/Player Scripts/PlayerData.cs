@@ -150,6 +150,8 @@ public class PlayerData : MonoBehaviour
             effect.PassiveOnAttackEffect();
         }
         StartCoroutine(GoForward());
+
+        GameObject.Find("CurrentEnemy").GetComponent<AudioSource>().Play();
         GameObject.Find("CurrentEnemy").GetComponent<CurrentEnemyData>().enemyCurrentHealth -= intendedDamage;
     }
 
@@ -174,11 +176,19 @@ public class PlayerData : MonoBehaviour
             StartCoroutine(IsHit());
         }
 
+
+
         GameObject.Find("Player").GetComponent<PlayerData>().PlayerCurrentHealth -= intendedIncomingDamage;
+
+        if (PlayerCurrentHealth <= 0)
+        {
+            GameObject.Find("Canvas").transform.Find("EndScreenLose").gameObject.SetActive(true);
+        }
     }
 
     IEnumerator IsHit()
     {
+        gameObject.GetComponent<AudioSource>().Play();
         hit = true;
         yield return new WaitForSeconds(1);
         hit = false;
