@@ -2128,7 +2128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0.011764707, b: 0.4666667, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2141,15 +2141,22 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 180
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget fermentum
-    sapien, id ullamcorper est. Fusce eu accumsan quam. Nullam pretium, ex non viverra
-    sollicitudin, leo erat rhoncus augue, vel hendrerit mauris dui sit amet velit. '
+  m_Text: 'Welcome to WE ARE THE HERO!
+
+    Defeat enemies and collect rewards to
+    gain new fans and become stronger!
+
+    Each demographic of Fans is represented
+    by their icon and number.
+
+    Try out different combinations to become the ultimate
+    hero!'
 --- !u!222 &1983840856
 CanvasRenderer:
   m_ObjectHideFlags: 0
