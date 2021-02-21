@@ -18,7 +18,7 @@ public class PyrotechnicsScript : MonoBehaviour, ItemEffect
 
     public void PassiveOnAttackEffect()
     {
-        GameObject.Find("Player").GetComponent<PlayerData>().intendedDamage += GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[1];
+        GameObject.Find("Player").GetComponent<PlayerData>().intendedDamage += GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[0];
     }
 
     public void PassiveOnDefendEffect()

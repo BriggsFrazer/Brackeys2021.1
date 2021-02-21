@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89f237b67f5c0b4b9ae9b0cef6b64e5, type: 3}
   m_Name: OriginalAnime
   m_EditorClassIdentifier: 
-  itemName: 
-  description: 
-  bigSprite: {fileID: 0}
-  idle1: {fileID: 0}
-  idle2: {fileID: 0}
-  hitSprite: {fileID: 0}
-  wearable: 0
-  id: 0
-  demographicID: 0
+  itemName: Original Anime
+  description: They made an anime of you! Gain 3 Teen fans every turn.
+  bigSprite: {fileID: 21300000, guid: 955fbc9feaa596f4c8871c4621f06afa, type: 3}
+  idle1: {fileID: 3194686454221005736, guid: 763c43c085258bb48bc34d4fe3be312a, type: 3}
+  idle2: {fileID: -2453762326585507958, guid: 763c43c085258bb48bc34d4fe3be312a, type: 3}
+  hitSprite: {fileID: -6106125794234239343, guid: 763c43c085258bb48bc34d4fe3be312a,
+    type: 3}
+  wearable: 1
+  id: 26
+  demographicID: 2

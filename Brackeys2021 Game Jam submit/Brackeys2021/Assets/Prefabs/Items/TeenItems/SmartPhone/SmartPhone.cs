@@ -2,17 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmartPhone : MonoBehaviour
+public class SmartPhone : MonoBehaviour, ItemEffect
 {
-    // Start is called before the first frame update
-    void Start()
+    public void AddEffect()
     {
-        
+        GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[1] += 15;
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RemoveEffect()
     {
-        
+
+    }
+
+    public void PassiveOnAttackEffect()
+    {
+
+
+
+    }
+
+    public void PassiveOnDefendEffect()
+    {
+
+    }
+
+    public void PassiveTurnEffect()
+    {
+
     }
 }

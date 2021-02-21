@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89f237b67f5c0b4b9ae9b0cef6b64e5, type: 3}
   m_Name: ThemeSong
   m_EditorClassIdentifier: 
-  itemName: 
-  description: 
-  bigSprite: {fileID: 0}
+  itemName: Theme Song
+  description: It's very catchy. Gain 2 of each fan every turn!
+  bigSprite: {fileID: 21300000, guid: c633ffdfb21833140bd997316e1ed6be, type: 3}
   idle1: {fileID: 0}
   idle2: {fileID: 0}
   hitSprite: {fileID: 0}
   wearable: 0
-  id: 0
+  id: 30
   demographicID: 0

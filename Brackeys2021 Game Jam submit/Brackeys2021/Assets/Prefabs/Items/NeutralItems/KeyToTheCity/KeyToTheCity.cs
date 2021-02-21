@@ -2,17 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeyToTheCity : MonoBehaviour
+public class KeyToTheCity : MonoBehaviour, ItemEffect
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public void AddEffect()
     {
-        
+        for (int i = 0; i < GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers.Count; i++)
+        {
+            GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[i] += 10;
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RemoveEffect()
     {
-        
+
+    }
+
+    public void PassiveOnAttackEffect()
+    {
+
+
+
+    }
+
+    public void PassiveOnDefendEffect()
+    {
+
+    }
+
+    public void PassiveTurnEffect()
+    {
+
     }
 }

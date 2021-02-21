@@ -108,7 +108,7 @@ public class CurrentEnemyData : MonoBehaviour
 
     public void GiveRewards()
     {
-        GameObject.Find("Player").GetComponent<PlayerData>().Money += 50 + (GameObject.Find("Player").GetComponent<PlayerData>().currentStage * 50);
+        GameObject.Find("Player").GetComponent<PlayerData>().Money += 50 + (GameObject.Find("Player").GetComponent<PlayerData>().currentStage * 2);
         List<int> demographicReward = new List<int>();
 
         int rewardAmount = 2;

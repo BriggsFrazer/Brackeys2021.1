@@ -2,17 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChildrensBlockGameScript : MonoBehaviour
+public class ChildrensBlockGameScript : MonoBehaviour, ItemEffect
 {
-    // Start is called before the first frame update
-    void Start()
+    public void AddEffect()
     {
-        
+        GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[0] += 3;
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RemoveEffect()
     {
-        
+
+    }
+
+    public void PassiveOnAttackEffect()
+    {
+        GameObject.Find("Player").GetComponent<PlayerData>().DemographicNumbers[0] += 3;
+    }
+
+    public void PassiveOnDefendEffect()
+    {
+
+    }
+
+    public void PassiveTurnEffect()
+    {
+
     }
 }

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89f237b67f5c0b4b9ae9b0cef6b64e5, type: 3}
   m_Name: BabyBoom
   m_EditorClassIdentifier: 
-  itemName: 
-  description: 
-  bigSprite: {fileID: 0}
+  itemName: Baby Boom
+  description: Gain Kid fans equal to 1/2 Adult fans.
+  bigSprite: {fileID: 21300000, guid: 5d5fe1a22626fe440b91e628d5dc3283, type: 3}
   idle1: {fileID: 0}
   idle2: {fileID: 0}
   hitSprite: {fileID: 0}
   wearable: 0
-  id: 0
-  demographicID: 0
+  id: 25
+  demographicID: 3
