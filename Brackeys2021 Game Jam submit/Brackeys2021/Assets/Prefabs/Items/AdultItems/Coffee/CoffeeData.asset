@@ -15,9 +15,10 @@ MonoBehaviour:
   itemName: Coffee
   description: Lose 1 money each round. If you do, gain an Adult fan.
   bigSprite: {fileID: 21300000, guid: 747ce38ac05db454395241cda061a40a, type: 3}
-  idle1: {fileID: 0}
-  idle2: {fileID: 0}
-  hitSprite: {fileID: 0}
-  wearable: 0
+  idle1: {fileID: 4807492983647161946, guid: f3f13a763e1d06d4382eaa1fb3d756d1, type: 3}
+  idle2: {fileID: 8702685674940742302, guid: f3f13a763e1d06d4382eaa1fb3d756d1, type: 3}
+  hitSprite: {fileID: 4840229287564518510, guid: f3f13a763e1d06d4382eaa1fb3d756d1,
+    type: 3}
+  wearable: 1
   id: 4
   demographicID: 3

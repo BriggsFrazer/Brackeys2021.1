@@ -15,9 +15,10 @@ MonoBehaviour:
   itemName: Bandage
   description: Quick grab a bandage! Heal 20%
   bigSprite: {fileID: 21300000, guid: 450bda2ac60e2534189273f9893e6e0c, type: 3}
-  idle1: {fileID: 0}
-  idle2: {fileID: 0}
-  hitSprite: {fileID: 0}
-  wearable: 0
+  idle1: {fileID: 870776997026448558, guid: 7f09fc0e335a11a4ea6d3e7d3cf8a229, type: 3}
+  idle2: {fileID: 1254397169233246477, guid: 7f09fc0e335a11a4ea6d3e7d3cf8a229, type: 3}
+  hitSprite: {fileID: 8500149364088544978, guid: 7f09fc0e335a11a4ea6d3e7d3cf8a229,
+    type: 3}
+  wearable: 1
   id: 99
   demographicID: 0

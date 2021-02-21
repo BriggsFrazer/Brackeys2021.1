@@ -15,9 +15,10 @@ MonoBehaviour:
   itemName: Flat Cap
   description: Cosy AND protective! Reduce incoming damage by 10.
   bigSprite: {fileID: 21300000, guid: 13bff03099f50fa4a89f10af2fb15bd9, type: 3}
-  idle1: {fileID: 0}
-  idle2: {fileID: 0}
-  hitSprite: {fileID: 0}
-  wearable: 0
+  idle1: {fileID: 8420322727164611989, guid: 0f8345d49303b5f438f53510466a469d, type: 3}
+  idle2: {fileID: -1941429340208924855, guid: 0f8345d49303b5f438f53510466a469d, type: 3}
+  hitSprite: {fileID: 8294880692987660285, guid: 0f8345d49303b5f438f53510466a469d,
+    type: 3}
+  wearable: 1
   id: 13
   demographicID: 4

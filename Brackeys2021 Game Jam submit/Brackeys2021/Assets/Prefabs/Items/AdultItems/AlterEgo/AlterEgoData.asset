@@ -15,9 +15,10 @@ MonoBehaviour:
   itemName: Alter Ego
   description: Gain 30 extra money each round!
   bigSprite: {fileID: 21300000, guid: 462e07e9404c06c44a6dcae857b8b184, type: 3}
-  idle1: {fileID: 0}
-  idle2: {fileID: 0}
-  hitSprite: {fileID: 0}
-  wearable: 0
+  idle1: {fileID: -9069686529169560097, guid: 3b7a8f967fe65f6478c1702c4f7fd809, type: 3}
+  idle2: {fileID: -656428035026187591, guid: 3b7a8f967fe65f6478c1702c4f7fd809, type: 3}
+  hitSprite: {fileID: -3468721745056926343, guid: 3b7a8f967fe65f6478c1702c4f7fd809,
+    type: 3}
+  wearable: 1
   id: 5
   demographicID: 3
