@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AlterEgoData
   m_EditorClassIdentifier: 
   itemName: Alter Ego
-  description: You got a weekend job! Gain 30 extra money each round!
+  description: You got a day job! Gain 30 extra money each round!
   bigSprite: {fileID: 21300000, guid: 462e07e9404c06c44a6dcae857b8b184, type: 3}
   idle1: {fileID: -9069686529169560097, guid: 3b7a8f967fe65f6478c1702c4f7fd809, type: 3}
   idle2: {fileID: -656428035026187591, guid: 3b7a8f967fe65f6478c1702c4f7fd809, type: 3}

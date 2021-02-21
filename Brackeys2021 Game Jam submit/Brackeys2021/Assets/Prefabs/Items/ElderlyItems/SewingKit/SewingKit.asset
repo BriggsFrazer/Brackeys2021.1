@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89f237b67f5c0b4b9ae9b0cef6b64e5, type: 3}
   m_Name: SewingKit
   m_EditorClassIdentifier: 
-  itemName: SewingKit
-  description: Add damage equal to Elderly fans when you attack.
+  itemName: Sewing Kit
+  description: Yummy! Add damage equal to Elderly fans when you attack.
   bigSprite: {fileID: 21300000, guid: 28ef9e205298a5245a67bb9257106fc9, type: 3}
   idle1: {fileID: 0}
   idle2: {fileID: 0}

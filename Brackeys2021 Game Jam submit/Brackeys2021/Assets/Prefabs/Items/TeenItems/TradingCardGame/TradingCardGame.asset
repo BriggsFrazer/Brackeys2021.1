@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TradingCardGame
   m_EditorClassIdentifier: 
   itemName: Trading Card Game
-  description: Open a pack every turn! 1/4 Gain 10 Teen fans!
+  description: Open a pack every turn! 1 in 4 chance to gain 10 Teen fans!
   bigSprite: {fileID: 21300000, guid: 814b5e450f2b24349ab31a499ff25c84, type: 3}
   idle1: {fileID: 0}
   idle2: {fileID: 0}

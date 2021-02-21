@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: DoubleEdgedSword
   m_EditorClassIdentifier: 
   itemName: Double-Edged Sword
-  description: Deal 20 bonus damage every attack, but only if you lose 1 Teen fan.
+  description: Ouch. Deal 20 bonus damage every attack, but only if you lose 1 Teen
+    fan.
   bigSprite: {fileID: 21300000, guid: bcfb2e827ec52234ea0006b08002e715, type: 3}
   idle1: {fileID: 0}
   idle2: {fileID: 0}
